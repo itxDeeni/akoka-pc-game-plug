@@ -1,6 +1,6 @@
 <template>
   <div class="contact-form-container">
-    <h2>Can't find your game? Custom Order</h2>
+    <h2>Can't Find Your Game? Place a Custom Order</h2>
     <form @submit.prevent="submitForm" class="contact-form">
       <div class="form-group">
         <label for="name">Your Name</label>
@@ -14,7 +14,7 @@
 
       <div class="form-group">
         <label for="message">Additional Note (Optional)</label>
-        <textarea id="message" v-model="form.message" placeholder="Include any specific version/repack details..." rows="3"></textarea>
+        <textarea id="message" v-model="form.message" placeholder="Any extra details? (e.g. version, DLC, etc.)" rows="3"></textarea>
       </div>
 
       <button type="submit" class="submit-btn">Message via WhatsApp</button>
@@ -33,7 +33,7 @@ const form = reactive({
 
 const submitForm = () => {
   const number = '2348130237990';
-  let text = `Hello my name is ${form.name}. I'm interested in buying a specific game: ${form.gameName}.`;
+  let text = `Hi! My name is ${form.name}. I'd like to order: ${form.gameName}.`;
   if (form.message) {
     text += `\nNote: ${form.message}`;
   }

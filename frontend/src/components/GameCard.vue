@@ -26,7 +26,7 @@ const props = defineProps({
 
 const orderGame = () => {
   const number = '2348130237990';
-  const text = encodeURIComponent(`Hello, I'm interested in buying ${props.game.title} for ${props.game.price}.`);
+  const text = encodeURIComponent(`Hi! I'd like to order ${props.game.title} for ${props.game.price}.`);
   window.open(`https://wa.me/${number}?text=${text}`, '_blank');
 };
 </script>

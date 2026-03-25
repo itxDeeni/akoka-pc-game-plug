@@ -3,7 +3,7 @@
     <header class="hero animate-fade-in">
       <div class="hero-content">
         <h1>Welcome to <span class="highlight">Akoka PC Game Plug</span></h1>
-        <p>Premium Repacks & Digital Deliveries. Game prices determined by size starting at ₦3,000.</p>
+        <p>Premium PC Games & Digital Delivery. Prices start at just ₦3,000 — based on game size.</p>
         <p class="promo-text">🎉 <strong>PROMO:</strong> Make 10 purchases and get a FREE game of your choice!</p>
         <p class="hdd-offer">💾 Prefer physical delivery? External Hard Drives available starting at an extra <strong>₦10,000 - ₦20,000</strong>. Delivery in 2-5 days depending on order size.</p>
         <a href="#games" class="cta-button">Browse Catalog</a>
@@ -13,7 +13,7 @@
     <main>
       <section id="games" class="games-section">
         <div class="section-header">
-          <h2>Latest Arrivals</h2>
+          <h2>Trending Games</h2>
           <div class="search-bar">
             <input 
               type="text" 
@@ -26,7 +26,7 @@
 
         <div v-if="loading" class="loading-state">
           <div class="spinner"></div>
-          <p>Fetching the latest titles...</p>
+          <p>Loading games...</p>
         </div>
 
         <div v-else-if="error" class="error-state">
@@ -80,7 +80,7 @@ const fetchGames = async () => {
     }
   } catch (err) {
     console.error(err);
-    error.value = 'Failed to load games. Please try again later.';
+    error.value = 'Oops! Something went wrong. Tap Retry to reload.';
   } finally {
     loading.value = false;
   }
